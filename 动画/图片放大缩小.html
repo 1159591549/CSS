@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            display: flex;
+            height: 500px;
+            width: 500px;
+            border: solid 3px khaki;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main div {
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+            overflow: hidden;
+            transform: scale(.8);
+            /* filter: blur(5px); */
+            
+        }
+
+        main:hover div {
+            /* transform: scale(.8); */
+            /* filter: blur(5px); */
+        }
+
+        /* main div:hover {
+            filter: none;
+            transform: scale(1.2);
+        } */
+
+        main div img {
+            height: 100%;
+            transition: .8s;
+            /* transform-origin: left top; */
+        }
+        main div:hover img{
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <img src="https://img1.baidu.com/it/u=1966616150,2146512490&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1657472400&t=2bb1ed82ca4098d830b7a9354a1ca749"
+                alt="">
+        </div>
+        <div>
+            <img src="https://img2.baidu.com/it/u=1792249350,650626052&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1657472400&t=708e85f93687d15d5911f45071957c09"
+                alt="">
+        </div>
+        <div>
+            <img src="https://img0.baidu.com/it/u=530426417,2082848644&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1657472400&t=5e46a3f7d80af563fc1b0e6337b3db12"
+                alt="">
+        </div>
+    </main>
+</body>
+
+</html>

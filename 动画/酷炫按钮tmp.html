@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 30px;
+            line-height: 30px;
+            width: 150px;
+            text-align: center;
+            border: solid 1px #ccc;
+            position: relative;
+            overflow: hidden;
+        }
+        div::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) skewX(-45deg);
+            background: gold;
+            width: 0;
+            height: 30px;
+            transition: .5s;
+            color: white;
+            z-index: -9;
+        }
+        div:hover::before{
+            width: 200px;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div>HOUDUNREN</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            height: 500px;
+            width: 500px;
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            border: solid 1px #ccc;
+            background-color: white;
+            padding: 10px 15px;
+            position: relative;
+            overflow: hidden;
+            z-index: 999;
+            cursor: pointer;
+        }
+        .btn:hover::before{
+            transform: translate(-50%,-50%) skew(-45deg);
+            width: 200px;
+        }
+        .btn::before{
+            content: '';
+            background-color: aqua;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) skew(-45deg);
+            z-index: -9;
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a class="btn">
+            HOUDUNREN
+        </a>
+    </main>
+</body>
+
+</html>

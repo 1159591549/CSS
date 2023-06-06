@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box__text {
+            width: 100%;
+            height: 60px;
+            line-height: 20px;
+            background-color: pink;
+            float: right;
+            margin-left: -60px;
+        }
+
+        .box__placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: gray;
+            opacity: 0.8;
+            float: right;
+        }
+
+        .box__more {
+            width: 60px;
+            text-align: right;
+            background: yellow;
+            float: right;
+
+            position: relative;
+            left: 0%;
+            /* left: 100%;
+            transform: translate(-100%, -100%);
+            color: #1890ff;
+            background-image: linear-gradient(to left, white 40%, rgba(255, 255, 255, 0.8) 70%, transparent 100%); */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <!-- 文字盒子 -->
+        <div class="box__text">腾讯以技术丰富互联网用户的生活。通过通信及社交软件微信和 QQ 促进用户联系，并助其连接数字内容和生活服务，尽在弹指间。</div>
+        <!-- 占位盒子 -->
+        <div class="box__placeholder"></div>
+        <!-- 自定义省略盒子 -->
+        <div class="box__more">...展开</div>
+    </div>
+</body>
+
+</html>

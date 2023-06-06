@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main div {
+            float: left;
+            width: 200px;
+            cursor: pointer;
+        }
+
+        div span {
+            display: inline-block;
+            background-color: #ccc;
+            color: white;
+            width: 100%;
+            text-align: center;
+            z-index: 999;
+            position: relative;
+        }
+
+        ul {
+            background-color: burlywood;
+            transform: translateY(-100%);
+            transition: .5s;
+            position: relative;
+            z-index: 99;
+            opacity: 0;
+        }
+        div:hover ul{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        ul li {
+            list-style: none;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <span>前端</span>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </div>
+        <div>
+            <span>后端</span>
+            <ul>
+                <li>java</li>
+                <li>mysql</li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            height: 500px;
+            width: 500px;
+            border: solid 3px khaki;
+            position: relative;
+        }
+
+        main div {
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        main div:nth-child(1):hover{
+            transform: skewX(30deg);
+            
+        }
+        main div:nth-child(1){
+            background-color: aqua;
+            z-index: 99;
+            transition: 1s;
+            transform-origin: left top;
+        }
+        main div:nth-child(2){
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div></div>
+        <div></div>
+    </main>
+</body>
+
+</html>

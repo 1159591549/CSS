@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love you</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        main {
+            width: 600px;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+        }
+        main i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 1s;
+        }
+        i.fa {
+            font-size: 50px;
+            color: #ccc;
+        }
+
+        .heart i:nth-child(1) {
+            color: red !important;
+        }
+
+        i:nth-child(2) {
+            color: red;
+            font-size: 25px;
+            width: 300px;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .heart i:nth-child(2) {
+            transform: translate(-50%, -50%) translateY(-100px);
+            opacity: 1;
+        }
+
+        .heart i:nth-child(3) {
+            transform: translate(-50%, -50%) scale(10);
+            color: red;
+            opacity: 0;
+        }
+        .heart i:nth-child(1){
+            top: 100%;
+            transform:  translate(-50%, -50%) rotateY(1440deg);
+        }
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 1s;
+        }
+        .heart img{
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="beat" onclick="heart()">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i>(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤</i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww2.sinaimg.cn%2Flarge%2F6af89bc8gw1f8squu2ruog20a203mq7w.gif&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660638033&t=7befb8d9b5c9e062b01003ff830e9b94" alt="">
+    </main>
+</body>
+<script>
+    function heart() {
+        $('.beat').toggleClass('heart')
+    }
+</script>
+
+</html>

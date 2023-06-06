@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        main{
+            height: 200px;
+            width: 200px;
+            animation: hd;
+            animation-duration: 5s;
+            /* 这个地方是初始值 */
+            background-color: white;
+        }
+        /* 这个地方表示颜色的过渡值，无替代样式从0变成100，最终再变成元素的初始值 */
+        @keyframes hd{
+            /* 0% {
+                background-color: red;
+            } */
+            100% {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            height: 300px;
+            width: 300px;
+            cursor: pointer;
+            position: relative;
+        }
+        span{
+            display: block;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(180deg);
+            background-color: ghostwhite;
+            border-radius: 50%;
+            color: #666;
+            font-size: 20px;
+            /* 这个地方如果不放开的话，strong标签旋转生效，到底是啥原因呢？ */
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        }
+        /* 这个地方加了旋转，理论上文字应该回正，但是上面的注释不放开的话文字是倒过来的 */
+        strong{
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <span>
+            <strong>后盾人</strong>
+        </span>
+    </main>
+</body>
+
+</html>

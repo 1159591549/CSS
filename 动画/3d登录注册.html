@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        div {
+            height: 100%;
+            width: 100%;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: 2s;
+        }
+
+        main div:nth-child(1) {
+            background-color: blueviolet;
+            transform: rotateY(0);
+        }
+
+        main div:nth-child(2) {
+            background-color: aqua;
+            transform: rotateY(180deg);
+        }
+
+        span {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="login">登录</div>
+        <div id="register">注册</div>
+        <span>
+            <button onclick="change('login')">登录</button>
+            <button onclick="change('register')">注册</button>
+        </span>
+    </main>
+</body>
+<script>
+    function change(status) {
+        let login = document.getElementById('login')
+        let register = document.getElementById('register')
+        switch (status) {
+            case 'login': {
+                login.style.transform = 'rotateY(0)'
+                register.style.transform = 'rotateY(180deg)'
+            }
+                break;
+            case 'register': {
+                login.style.transform = 'rotateY(180deg)'
+                register.style.transform = 'rotateY(0)'
+            }
+                break;
+        }
+
+    }
+</script>
+
+</html>

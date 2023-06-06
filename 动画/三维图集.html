@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            width: 200px;
+            height: 100px;
+            cursor: pointer;
+            position: relative;
+            border: solid 1px white;
+            transform-style: preserve-3d;
+            transform: perspective(900px) rotateX(-20deg);
+            transform-origin: center center -150px;
+            transition: 1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: center center -150px;
+        }
+
+        div:nth-child(2) {
+            transform: rotateY(90deg);
+        }
+
+        div:nth-child(3) {
+            transform: rotateY(180deg);
+        }
+
+        div:nth-child(4) {
+            transform: rotateY(270deg);
+        }
+
+        div img {
+            width: 200px;
+            height: 100px;
+        }
+        article{
+            height: 100px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        article:hover main {
+            transform: perspective(900px) rotateX(-20deg) rotateY(720deg);
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <main>
+            <div>
+                <img src="https://img1.baidu.com/it/u=2476457920,2055857727&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img1.baidu.com/it/u=2658939207,2791674017&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img0.baidu.com/it/u=468539302,3909142183&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=676"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://img2.baidu.com/it/u=4185738571,2433540613&fm=253&fmt=auto&app=138&f=JPEG?w=708&h=500"
+                    alt="">
+            </div>
+        </main>
+    </article>
+
+</body>
+
+</html>

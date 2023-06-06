@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            height: 300px;
+            width: 300px;
+            background-color: bisque;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+        }
+        ul{
+            height: 90%;
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: brown;
+            border-radius: 50%;
+        }
+        li{
+            list-style: none;
+            height: 90%;
+            width: 5px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        li:nth-child(1){
+            transform: translate(-50%,-50%);
+        }
+        li:nth-child(2){
+            transform: translate(-50%,-50%) rotate(30deg);
+        }
+        li:nth-child(3){
+            transform: translate(-50%,-50%) rotate(60deg);
+        }
+        li:nth-child(4){
+            transform: translate(-50%,-50%) rotate(90deg);
+        }
+        li:nth-child(5){
+            transform: translate(-50%,-50%) rotate(120deg);
+        }
+        li:nth-child(6){
+            transform: translate(-50%,-50%) rotate(150deg);
+        }
+        div{
+            height: 70%;
+            width: 70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: brown;
+            border-radius: 50%;
+        }
+        i{
+            height: 12px;
+            width: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            border-radius: 50%;
+        }
+        span{
+            display: block;
+            position: absolute;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-100%);
+            transform-origin: bottom;
+            transition: 2s;
+        }
+        .hour{
+            width: 5px;
+            height: 20%;
+            transform: translate(-50%,-100%) rotate(30deg);
+        }
+        .minute{
+            width: 3px;
+            height: 25%;
+            transform:translate(-50%,-100%) rotate(60deg);
+        }
+        .second{
+            width: 2px;
+            height: 30%;
+        }
+        main:hover .second{
+            transform:translate(-50%,-100%) rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div></div>
+        <i></i>
+        <span class="hour"></span>
+        <span class="minute"></span>
+        <span class="second"></span>
+    </main>
+</body>
+
+</html>

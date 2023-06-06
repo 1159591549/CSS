@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            height: 300px;
+            width: 300px;
+            background-color: bisque;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* main:hover div:nth-child(1){
+            transform: perspective(900px) rotateY(-180deg);
+        }
+        main:hover div:nth-child(2){
+            transform: perspective(900px) rotateY(0);
+        } */
+
+        div {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            font-size: 50px;
+            color: white;
+            position: absolute;
+            /* 控制标签反转后不显示 */
+            backface-visibility: hidden;
+            transform: perspective(900px);
+            transition: 2s;
+        }
+
+        div:nth-child(1) {
+            background-color: aqua;
+        }
+
+        div:nth-child(2) {
+            background-color: green;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>1</div>
+        <div>2</div>
+    </main>
+</body>
+
+</html>
